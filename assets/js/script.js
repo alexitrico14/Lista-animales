@@ -61,16 +61,16 @@ document.addEventListener("DOMContentLoaded", function () {
         const tipo = document.getElementById("tipo").value;
         const enfermedad = document.getElementById("enfermedad").value;
 
-        let mascota;
+        let animal;
         switch (tipo) {
             case 'perro':
-                mascota = new Mascota(nombrePropietario, direccion, telefono, tipo, nombreMascota, enfermedad);
+                animal = new Mascota(nombrePropietario, direccion, telefono, tipo, nombreMascota, enfermedad);
                 break;
             case 'gato':
-                mascota = new Mascota(nombrePropietario, direccion, telefono, tipo, nombreMascota, enfermedad);
+                animal = new Mascota(nombrePropietario, direccion, telefono, tipo, nombreMascota, enfermedad);
                 break;
             case 'conejo':
-                mascota = new Mascota(nombrePropietario, direccion, telefono, tipo, nombreMascota, enfermedad);
+                animal = new Mascota(nombrePropietario, direccion, telefono, tipo, nombreMascota, enfermedad);
                 break;
             default:
                 console.error("Error");
@@ -79,8 +79,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const resultado = document.getElementById("resultado").querySelector("ul");
         resultado.innerHTML = `
-        <li>${mascota.datosPropietario()}</li>
-        <li>${mascota.tipoAnimal}, mientras que el nombre de la mascota es: ${mascota.nombreMascota} y la enfermedad es: ${mascota.enfermedadMascota}</li>
+        <li>${animal.datosPropietario()}</li>
+        <li>${animal.tipoAnimal}, mientras que el nombre de la mascota es: ${animal.nombreMascota} y la enfermedad es: ${animal.enfermedadMascota}</li>
       `;
     });
 });
